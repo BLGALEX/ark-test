@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  database:
+    image: postgres:15
+    environment:
+      - "POSTGRES_DB=books"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+    volumes:
+      - .:/var/lib/postgresql
+    ports:
+      - "5432:5432"
